@@ -8,7 +8,7 @@ This program takes an html file downloaded from the dowload function on Ao3 and 
 from bs4 import BeautifulSoup
 
 #This opens the html file you downloaded (note the output will be saved to the same location as you saved the initial file).
-link = open("/home/pi/Desktop/Living.html")
+link = open("[YOUR FILE PATH HERE]",  encoding="utf-8")
 
 #Parses the file and then calls the section that is just the chapters of the fic
 soup = BeautifulSoup(link, 'html.parser')
@@ -35,6 +35,6 @@ for i in range(len(heading)):
     #This creates a unique name for the file
     doc_title = "chapter" + str(i) + ".html"
     #This writes the html file, note if the file already exists it won't overwrite it
-    f = open(doc_title, "x")
+    f = open(doc_title, "x", encoding="utf-8")
     f.write(fullChapt)
     f.close
