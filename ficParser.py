@@ -16,7 +16,7 @@ soup2 = soup.find("div", id="chapters")
 
 #This calls all the chapter headings and chapter text and puts them into a list
 heading = soup2.find_all(class_ = "heading")
-chapt = soup2.find_all(class_ = "userstuff" )
+chapt = soup2.find_all("div", class_ = "userstuff" )
 
 #This creates some strings that will make the chapter html files work and look right
 first_line = '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">'
